@@ -24,7 +24,7 @@ export default function Cadastro() {
     <>
       <GlobalStyle />
       <Div>
-        <Stars /> {/* Renderizado antes do Header para ficar abaixo dele */}
+        <Stars />
         <Header />
         <Content>
           <Title></Title>

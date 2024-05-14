@@ -24,7 +24,7 @@ const Stars = () => {
     const ctx = canvas.getContext("2d");
     const w = (canvas.width = window.innerWidth);
     const h = (canvas.height = window.innerHeight);
-    const hue = 240;
+    const hue = 250;
     let count = 0;
 
     const canvas2 = document.createElement("canvas");
@@ -41,7 +41,7 @@ const Stars = () => {
       half
     );
     gradient2.addColorStop(0.025, "#fff");
-    gradient2.addColorStop(0.1, `hsl(${hue}, 61%, 15%)`);
+    gradient2.addColorStop(0.1, `hsl(${hue}, 61%, 3%)`);
     gradient2.addColorStop(0.25, `hsl(${hue}, 64%, 0%)`);
     gradient2.addColorStop(1, "transparent");
 
@@ -78,7 +78,7 @@ const Stars = () => {
         this.orbitX = w / 2;
         this.orbitY = h / 2;
         this.timePassed = random(0, maxStars);
-        this.speed = random(this.orbitRadius) / 1000000;
+        this.speed = random(this.orbitRadius) / 1200000;
         this.alpha = random(2, 10) / 10;
 
         count++;
@@ -114,8 +114,8 @@ const Stars = () => {
 
     function animation() {
       ctx.globalCompositeOperation = "source-over";
-      ctx.globalAlpha = 0.8;
-      ctx.fillStyle = `hsla(${hue}, 64%, 6%, 1)`;
+      ctx.globalAlpha = 1;
+      ctx.fillStyle = `hsla(${hue}, 30%, 3%, 10)`; //ajustar cor de fundo
       ctx.fillRect(0, 0, w, h);
 
       ctx.globalCompositeOperation = "lighter";
