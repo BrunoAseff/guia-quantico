@@ -5,7 +5,6 @@ const H1 = styled.h1`
   font-size: 70px;
   font-weight: 600;
   position: relative;
-  text-shadow: 0px 0px 13px rgba(255, 255, 255, 0.3);
   text-align: center;
   aligh-items: center;
   padding-top: 40px;
@@ -14,12 +13,12 @@ const H1 = styled.h1`
 
 const P = styled.p`
   color: rgb(243, 244, 246);
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 100;
   position: relative;
   text-align: center;
   aligh-items: center;
-  padding-top: 40px;
+  padding-top: 20px;
   z-index: 3;
 `;
 

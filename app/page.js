@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Stars from "../components/stars";
 import Header from "../components/Header";
 import Title from "../components/Title";
+import GlassCard from "../components/GlassCard";
 import GlobalStyle from "../components/GlobalStyles";
 
 const Div = styled.div`
@@ -28,6 +29,7 @@ export default function Cadastro() {
         <Header />
         <Content>
           <Title></Title>
+          <GlassCard />
         </Content>
       </Div>
     </>

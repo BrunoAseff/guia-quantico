@@ -10,12 +10,9 @@ font-size: 14px;
 padding: 11px 23px;
 margin-right: 20px;
 border-radius: 40px;
-box-shadow: 0px 0px 13px rgba(255, 255, 255, 0.3);
 display: flex;
 border-style: solid;
 box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
--webkit-backdrop-filter: blur(10px);
-backdrop-filter: blur(10px);
 border-width: 1px;
 
 &:hover{
@@ -34,15 +31,12 @@ color: white;
 font-size: 14px;
 padding: 11px 23px;
 margin-right: 100px;
-box-shadow: 0px 0px 13px rgba(255, 255, 255, 0.3);
 display: flex;
 border-style: solid;
 border-radius: 40px;
 border-color: white;
 box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
 background: rgba(255, 255, 255, 0);
--webkit-backdrop-filter: blur(10px);
-backdrop-filter: blur(10px);
 border-width: 1px;
 
 &:hover{
