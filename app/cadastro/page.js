@@ -1,3 +1,5 @@
+import Stars from "../../components/stars";
+
 export default function Cadastro() {
-  return <div>Cadastro</div>;
+  return <Stars />;
 }

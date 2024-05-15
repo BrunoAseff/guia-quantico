@@ -1,3 +1,5 @@
-export default function Cadastro() {
-  return <div>Login</div>;
+import Stars from "../../components/stars";
+
+export default function Login() {
+  return <Stars />;
 }

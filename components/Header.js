@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useRouter } from "next/navigation";
 
 const Button1 = styled.button`
 display: flex;
@@ -56,11 +57,13 @@ const Div = styled.div`
 `;
 
 export default function Header() {
+  const router = useRouter();
+
   return (
     <Div>
-      <Button1>Entrar</Button1>
+      <Button1 onClick={() => router.push("/login")}>Entrar</Button1>
 
-      <Button2>Criar Conta</Button2>
+      <Button2 onClick={() => router.push("/cadastro")}>Criar Conta</Button2>
     </Div>
   );
 }
