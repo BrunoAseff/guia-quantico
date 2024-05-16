@@ -3,7 +3,7 @@ import styled from "styled-components";
 const H1 = styled.h1`
   color: white;
   font-size: 70px;
-  font-weight: 900;
+  font-weight: 700;
   position: relative;
   text-align: center;
   aligh-items: center;
