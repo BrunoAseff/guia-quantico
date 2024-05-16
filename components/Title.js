@@ -3,7 +3,7 @@ import styled from "styled-components";
 const H1 = styled.h1`
   color: white;
   font-size: 70px;
-  font-weight: 600;
+  font-weight: 900;
   position: relative;
   text-align: center;
   aligh-items: center;
@@ -14,7 +14,7 @@ const H1 = styled.h1`
 const P = styled.p`
   color: rgb(243, 244, 246);
   font-size: 22px;
-  font-weight: 100;
+  font-weight: 300;
   position: relative;
   text-align: center;
   aligh-items: center;

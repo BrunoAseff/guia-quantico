@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 const Button1 = styled.button`
 display: flex;
 text-align: center;
-font-weight: 100;
+font-weight: 300;
 background: white;
 color: black;
 font-size: 14px;
@@ -27,7 +27,7 @@ border-width: 1px;
 const Button2 = styled.button`
 display: flex;
 text-align: center;
-font-weight: 100;
+font-weight: 300;
 color: white;
 font-size: 14px;
 padding: 11px 23px;

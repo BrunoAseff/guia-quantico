@@ -1,6 +1,6 @@
-import { Rubik } from "next/font/google";
+import { Zen_Maru_Gothic } from "next/font/google";
 
-const rubik = Rubik({ subsets: ["latin"] });
+const Zen = Zen_Maru_Gothic({ subsets: ["latin"], weight: ["300", "700"] });
 
 export const metadata = {
   title: "Guia Quântico",
@@ -10,7 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={rubik.className}>{children}</body>
+      <body className={Zen.className}>{children}</body>
     </html>
   );
 }
