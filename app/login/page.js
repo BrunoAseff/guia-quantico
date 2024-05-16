@@ -1,5 +1,3 @@
-"use client";
-
 import Stars from "../../components/stars";
 import styled from "styled-components";
 
