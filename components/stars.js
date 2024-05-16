@@ -16,7 +16,7 @@ const Canvas = styled.canvas`
 
 const Stars = () => {
   const canvasRef = useRef(null);
-  const maxStars = 7000;
+  const maxStars = 6000;
   const stars = [];
 
   useEffect(() => {
