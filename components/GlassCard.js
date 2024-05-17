@@ -1,9 +1,11 @@
 import styled from "styled-components";
+import Tunelamento from "./animations/Tunelamento";
 
 const Card = styled.div`
   width: 200px;
   height: 200px;
   margin: 70px;
+  padding-top: 20px;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -15,6 +17,7 @@ const Card = styled.div`
   border-radius: 10px;
   box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
   background: rgba(255, 255, 255, 0);
+  flex-direction: column;
 `;
 
 const Div = styled.div`
@@ -26,7 +29,10 @@ export default function GlassCard() {
   return (
     <Div>
       <Card>Princípio da incerteza</Card>
-      <Card>Tunelamento Quântico</Card>
+      <Card>
+        Tunelamento Quântico
+        <Tunelamento />
+      </Card>
       <Card>Dualidade onda-partícula</Card>
       <Card>Emaranhamento Quântico</Card>
     </Div>

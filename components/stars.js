@@ -16,7 +16,7 @@ const Canvas = styled.canvas`
 
 const Stars = () => {
   const canvasRef = useRef(null);
-  const maxStars = 7000;
+  const maxStars = 4500;
   const stars = [];
 
   useEffect(() => {
@@ -78,7 +78,7 @@ const Stars = () => {
         this.orbitX = w / 2;
         this.orbitY = h / 2;
         this.timePassed = random(0, maxStars);
-        this.speed = random(this.orbitRadius) / 1200000;
+        this.speed = random(this.orbitRadius) / 800000;
         this.alpha = random(2, 10) / 10;
 
         count++;

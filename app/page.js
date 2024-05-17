@@ -17,10 +17,10 @@ const Div = styled.div`
 
 const Content = styled.div`
   position: relative;
-  z-index: 3; /* Conteúdo adicional acima das estrelas e do header, se necessário */
+  z-index: 3;
 `;
 
-export default function Cadastro() {
+export default function Home() {
   return (
     <>
       <GlobalStyle />
