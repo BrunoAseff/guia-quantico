@@ -26,6 +26,7 @@ const Circle = styled.div`
   height: 20px;
   background-color: white;
   border-radius: 50%;
+  box-shadow: 0px 0px 13px rgba(255, 255, 255, 0.3);
 `;
 
 export default function Tunelamento() {
@@ -38,7 +39,7 @@ export default function Tunelamento() {
         { value: 100, duration: 1000 },
         { value: 0, duration: 1000 },
       ],
-      easing: "easeInOutSine",
+      easing: "spring(1, 80, 10, 0)",
       loop: true,
     });
   }, []);

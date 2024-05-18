@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useRouter } from "next/navigation";
 
-const Button1 = styled.button`
+export const Button1 = styled.button`
 display: flex;
 text-align: center;
 font-weight: 300;
