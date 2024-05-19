@@ -4,60 +4,58 @@ const Container = styled.div`
   display: flex;
   margin: 50px;
   color: ${(props) => props.cor};
-  font-weight: 700;
+  font-size: 20px;
   position: relative;
 `;
 
 const Svg = styled.svg`
   display: flex;
   justify-content: flex-start;
+  margin-top: 10px;
 `;
 
 const H1 = styled.h1`
   margin: 0 0 0 15px;
+  font-weight: 900;
 `;
 
 export default function Logo(cor) {
   return (
     <Container>
       <Svg
-        width="50"
-        height="50"
+        width="40"
+        height="40"
         viewBox="0 0 200 200"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         {" "}
-        <g clip-path="url(#clip0_235_973)">
+        <g clip-path="url(#clip0_234_920)">
           {" "}
           <path
             fill-rule="evenodd"
             clip-rule="evenodd"
-            d="M100 -4.37114e-06C155.228 -6.78525e-06 200 44.7715 200 100C200 155.228 155.228 200 100 200C44.7715 200 5.67237e-06 155.228 3.25826e-06 100C8.44143e-07 44.7715 44.7715 -1.95703e-06 100 -4.37114e-06ZM100 -4.37114e-06C138.108 -6.03688e-06 169 30.8923 169 69C169 107.108 138.108 138 100 138C61.8924 138 31 107.108 31 69C31 30.8923 61.8924 -2.7054e-06 100 -4.37114e-06ZM132 69C132 51.3269 117.673 37 100 37C82.3269 37 68 51.3269 68 69C68 86.6731 82.3269 101 100 101C117.673 101 132 86.6731 132 69Z"
-            fill="url(#paint0_linear_235_973)"
+            d="M0 100L4.37114e-06 0L100 4.37114e-06C100 55.2285 55.2285 100 0 100ZM200 100C200 44.7716 155.228 1.88558e-05 100 4.37114e-06L100 100L6.5969e-06 100C1.76868e-06 155.228 44.7715 200 100 200H200L200 100ZM199.961 100L100 100L100 200C100 144.785 144.75 100.021 199.961 100Z"
+            fill="url(#paint0_linear_234_920)"
           />{" "}
         </g>{" "}
         <defs>
           {" "}
           <linearGradient
-            id="paint0_linear_235_973"
-            x1="-9.344e-06"
-            y1="23"
-            x2="152.5"
-            y2="160.5"
+            id="paint0_linear_234_920"
+            x1="157.5"
+            y1="32"
+            x2="44"
+            y2="147.5"
             gradientUnits="userSpaceOnUse"
           >
             {" "}
-            <stop stop-color="black" /> <stop offset="1" stop-color="black" />{" "}
+            <stop offset="0.0509862" stop-color="black" />{" "}
+            <stop offset="1" stop-color="black" />{" "}
           </linearGradient>{" "}
-          <clipPath id="clip0_235_973">
+          <clipPath id="clip0_234_920">
             {" "}
-            <rect
-              width="200"
-              height="200"
-              fill="black"
-              transform="translate(7.62939e-06 200) rotate(-90)"
-            />{" "}
+            <rect width="200" height="200" fill="black" />{" "}
           </clipPath>{" "}
         </defs>{" "}
       </Svg>
