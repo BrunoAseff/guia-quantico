@@ -20,6 +20,33 @@ const Card = styled.div`
   padding: 20px;
 `;
 
+const Input = styled.input`
+  margin: 10px 0;
+  width: 350px;
+  height: 40px;
+  padding: 0 40px 0 10px;
+  box-sizing: border-box;
+  background: black;
+  border: solid;
+  border-radius: 10px;
+  color: white;
+  text-align: start;
+  &:focus {
+    border: 4px solid white;
+  }
+  &::placeholder {
+    color: #d4d4d8;
+  }
+`;
+
+const Text = styled.p`
+  color: black;
+  align-self: flex-start; /* Align text to the start of the card */
+  font-weight: 700;
+  font-size: 15px;
+  margin: 20px 0 0 13px; /* Add margin for better spacing */
+`;
+
 export default function Login() {
   return (
     <Container>
@@ -38,8 +65,6 @@ export default function Login() {
         <Text>Confirmar Senha</Text>
 
         <Input placeholder="Confirme sua senha" type="password" />
-        <A>Já tenho uma conta</A>
-        <Button>Entrar</Button>
       </Card>
     </Container>
   );
