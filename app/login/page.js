@@ -2,6 +2,7 @@
 
 import styled from "styled-components";
 import Logo from "../../components/Logo";
+import { useRouter } from "next/navigation";
 
 const Container = styled.div`
   display: flex;
@@ -81,6 +82,8 @@ const A = styled.a`
 `;
 
 export default function Login() {
+  const router = useRouter();
+
   return (
     <Container>
       <Card>
