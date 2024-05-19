@@ -2,7 +2,6 @@
 
 import React from "react";
 import styled from "styled-components";
-import Stars from "../components/stars";
 import Header from "../components/Header";
 import Title from "../components/Title";
 import GlassCard from "../components/GlassCard";
@@ -25,7 +24,6 @@ export default function Home() {
     <>
       <GlobalStyle />
       <Div>
-        <Stars />
         <Header />
         <Content>
           <Title></Title>
