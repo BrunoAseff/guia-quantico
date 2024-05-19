@@ -1,0 +1,64 @@
+.Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+}
+
+.card {
+  margin-top: 100px;
+  width: 370px;
+  height: auto;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  padding: 20px;
+  mix-blend-mode: screen;
+}
+
+input {
+  margin: 10px 0;
+  width: 350px;
+  height: 40px;
+  padding: 0 40px 0 10px;
+  box-sizing: border-box;
+  background: black;
+  border: solid;
+  border-radius: 10px;
+  color: white;
+  text-align: start;
+  &:focus {
+    border: 4px solid white;
+  }
+  &::placeholder {
+    color: #d4d4d8;
+  }
+}
+
+.text {
+  color: black;
+  align-self: flex-start; /* Align text to the start of the card */
+  font-weight: 700;
+  font-size: 15px;
+  margin: 20px 0 0 13px; /* Add margin for better spacing */
+}
+.button {
+  margin-top: 40px; /* Add margin at the top for spacing */
+  padding: 10px 20px; /* Adjust padding for better button size */
+  font-weight: 700;
+  color: white;
+  font-size: 14px;
+  border: 1px solid white;
+  border-radius: 20px;
+  background: black;
+  width: 120px; /* Set a fixed width */
+  text-align: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
