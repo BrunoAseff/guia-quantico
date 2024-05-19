@@ -8,7 +8,7 @@ const Canvas = styled.canvas`
   height: 100vh;
   padding: 0;
   margin: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: -1;

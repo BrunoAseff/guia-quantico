@@ -7,10 +7,12 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   width: 100vw;
   height: 100vh;
   background: black;
+  position: fixed;
+  left: 0;
+  top: 0;
 `;
 
 const Card = styled.div`
@@ -23,7 +25,6 @@ const Card = styled.div`
   align-items: center;
   border-radius: 10px;
   padding: 20px;
-  mix-blend-mode: screen;
 `;
 
 const Input = styled.input`
