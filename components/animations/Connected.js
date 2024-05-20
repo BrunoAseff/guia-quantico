@@ -32,7 +32,7 @@ const Connect = () => {
         { value: 40, duration: 1000 },
       ],
       borderRadius: ["0%", "50%"],
-      backgroundColor: "#FAFAFA", // Added color transition
+      backgroundColor: "#71717A", // Added color transition
       easing: "easeInOutQuad",
       direction: "alternate",
       loop: true,

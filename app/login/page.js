@@ -7,13 +7,10 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80vw;
-  height: 80vh;
+  height: 90vh; /* Ensure the container takes full viewport height */
 `;
 
 const Card = styled.div`
-  margin: 190px 0 0 370px;
-  width: 450px;
   height: auto;
   background: white;
   display: flex;
@@ -41,6 +38,10 @@ const Input = styled.input`
   &::placeholder {
     color: #d4d4d8;
   }
+  &:hover {
+    background: linear-gradient(to right, #27272a, black, #27272a);
+    color: white;
+  }
 `;
 
 const Text = styled.p`
@@ -57,6 +58,10 @@ const ForgotPassword = styled.p`
   font-weight: 700;
   font-size: 17px;
   margin: 20px 14px 6px 13px; /* Add margin for better spacing */
+  &:hover {
+    color: #006fee;
+    cursor: pointer;
+  }
 `;
 
 const PasswordText = styled.div`
@@ -67,17 +72,19 @@ const PasswordText = styled.div`
 `;
 
 const Button = styled.button`
-  margin-top: 40px; /* Add margin at the top for spacing */
-  padding: 10px 20px; /* Adjust padding for better button size */
+  margin: 40px 0; /* Add margin at the top for spacing */
+  padding: 13px 170px; /* Adjust padding for better button size */
   font-weight: 700;
-  color: white;
+  color: black;
   font-size: 14px;
-  border: 1px solid white;
+  border: 3px solid black;
   border-radius: 20px;
-  background: black;
-  width: 120px; /* Set a fixed width */
+  background: white;
   text-align: center;
   &:hover {
+    font-weight: 600;
+    background: linear-gradient(to right, #27272a, black, #27272a);
+    color: white;
     cursor: pointer;
   }
 `;
@@ -87,9 +94,13 @@ const LogoContainer = styled.div`
   justify-content: center;
 `;
 
-const A = styled.a`
+const P = styled.p`
   font-weight: 700;
   color: "black";
+  &:hover {
+    color: #006fee;
+    cursor: pointer;
+  }
 `;
 
 export default function Login() {
@@ -100,19 +111,16 @@ export default function Login() {
           <Logo />
         </LogoContainer>
         <Text>Email</Text>
-
         <Input placeholder="Insira o seu email" type="text" />
-
         <PasswordText>
           <Text>Senha</Text>
           <ForgotPassword>Esqueceu sua senha?</ForgotPassword>
         </PasswordText>
-
         <Input placeholder="Insira a sua senha" type="password" />
-        <A href="/" onClick={() => router.push("/cadastro")}>
+        <P href="/" onClick={() => router.push("/cadastro")}>
           Não tenho uma conta
-        </A>
-        <Button>Entrar</Button>
+        </P>
+        <Button>ENTRAR</Button>
       </Card>
     </Container>
   );
