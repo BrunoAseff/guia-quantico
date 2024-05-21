@@ -1,7 +1,10 @@
 import { Zen_Maru_Gothic } from "next/font/google";
 import Stars from "../components/stars";
 
-const Zen = Zen_Maru_Gothic({ subsets: ["latin"], weight: ["300", "700"] });
+const Zen = Zen_Maru_Gothic({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700", "900"],
+});
 
 export const metadata = {
   title: "Guia Quântico",
