@@ -1,8 +1,6 @@
 # Guia Quântico
 
-## Projeto ainda não está finalizado
-
-Bem-vindo ao **Guia Quântico**! Este projeto é um site que oferece um curso para explicar física quântica de uma maneira prática e acessível.
+Este projeto é um site que oferece um curso para explicar física quântica de uma maneira prática e acessível.
 
 ## Objetivo do Projeto
 
