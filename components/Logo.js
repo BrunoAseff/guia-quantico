@@ -19,7 +19,7 @@ const H1 = styled.h1`
   font-weight: 900;
 `;
 
-export default function Logo(cor) {
+export default function Logo() {
   return (
     <Container>
       <Svg
