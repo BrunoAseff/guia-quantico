@@ -2,6 +2,9 @@
 
 import styled from "styled-components";
 import Logo from "../../components/Logo";
+import { signup } from "../login/actions.js";
+import { useRouter } from "next/navigation";
+import { Button } from "../login/page";
 
 const Container = styled.div`
   display: flex;
@@ -10,7 +13,7 @@ const Container = styled.div`
   height: 95vh;
 `;
 
-const Card = styled.div`
+const Form = styled.form`
   width: 100%;
   max-width: 480px;
   background: white;
@@ -26,9 +29,8 @@ const Card = styled.div`
 `;
 
 const Input = styled.input`
-  margin: 0 0 10px 0;
   width: 430px;
-  height: 48px;
+  height: 45px;
   padding: 0 40px 0 10px;
   box-sizing: border-box;
   background: black;
@@ -45,39 +47,21 @@ const Input = styled.input`
   &:hover {
     background: linear-gradient(to right, #27272a, black, #27272a);
     color: white;
-  }
 `;
 
-const Text = styled.p`
+const Label = styled.label`
   color: black;
-  align-self: flex-start; /* Align text to the start of the card */
+  align-self: flex-start;
   font-weight: 700;
   font-size: 15px;
-  margin: 10px 0 0 17px; /* Reduced margin for better spacing */
+  margin: 15px 0 5px 17px;
 `;
 
-const Button = styled.button`
-  margin-top: auto; /* Push the button to the bottom */
-  margin-bottom: 20px; /* Add margin to the bottom for spacing */
-  padding: 10px 20px;
-  width: 100%;
-  max-width: 350px;
-  font-weight: 700;
-  color: black;
-  font-size: 12px;
-  border: 2px solid black;
-  border-radius: 15px;
-  background: white;
-  text-align: center;
-  &:hover {
-    background: linear-gradient(to right, #27272a, black, #27272a);
-    color: white;
-    cursor: pointer;
-  }
-`;
 const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
+  max-height: 100px;
+  flex-direction: column;
 `;
 
 const A = styled.p`
@@ -90,24 +74,51 @@ const A = styled.p`
   }
 `;
 
-export default function Login() {
+const H1 = styled.h1`
+  color: black;
+  align-self: flex-start; /* Align text to the start of the card */
+  font-weight: 700;
+  font-size: 22px;
+  margin-left: 17px;
+`;
+
+export default function Cadastro() {
+  const router = useRouter();
+
   return (
     <Container>
-      <Card>
+      <Form method="POST">
         <LogoContainer>
           <Logo />
         </LogoContainer>
-        <Text>Nome</Text>
+        <H1>Cadastro</H1>
+
+        <Label>Nome</Label>
         <Input placeholder="Insira o seu nome" type="text" />
-        <Text>Email</Text>
-        <Input placeholder="Insira o seu email" type="email" />
-        <Text>Senha</Text>
-        <Input placeholder="Insira a sua senha" type="password" />
-        <Text>Confirmar Senha</Text>
-        <Input placeholder="Confirme sua senha" type="password" />
-        <A href="/cadastro">Já tenho uma conta</A>
-        <Button>CRIAR CONTA</Button>
-      </Card>
+        <Label for="email">Email</Label>
+        <Input
+          placeholder="Insira o seu email"
+          id="email"
+          name="email"
+          type="email"
+          autocomplete="email"
+          required
+        />
+        <Label>Senha</Label>
+        <Input
+          placeholder="Insira a sua senha"
+          id="password"
+          name="password"
+          type="password"
+          required
+        />
+        <Label>Confirmar Senha</Label>
+        <Input placeholder="Confirme sua senha" type="password" required />
+        <A onClick={() => router.push("/login")}>Já tenho uma conta</A>
+        <Button type="submit" formAction={signup}>
+          CRIAR CONTA
+        </Button>
+      </Form>
     </Container>
   );
 }

@@ -2,15 +2,17 @@
 
 import styled from "styled-components";
 import Logo from "../../components/Logo";
+import { login } from "./actions";
+import { useRouter } from "next/navigation";
 
 const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh; /* Ensure the container takes full viewport height */
+  height: 90vh;
 `;
 
-const Card = styled.div`
+const Form = styled.form`
   height: auto;
   background: white;
   display: flex;
@@ -41,15 +43,14 @@ const Input = styled.input`
   &:hover {
     background: linear-gradient(to right, #27272a, black, #27272a);
     color: white;
-  }
 `;
 
-const Text = styled.p`
+const Label = styled.label`
   color: black;
   align-self: flex-start; /* Align text to the start of the card */
   font-weight: 700;
   font-size: 17px;
-  margin: 20px 0 6px 13px; /* Add margin for better spacing */
+  margin: 20px 0 6px 6px; /* Add margin for better spacing */
 `;
 
 const ForgotPassword = styled.p`
@@ -71,18 +72,20 @@ const PasswordText = styled.div`
   width: 100%;
 `;
 
-const Button = styled.button`
-  margin: 40px 0; /* Add margin at the top for spacing */
-  padding: 13px 170px; /* Adjust padding for better button size */
+export const Button = styled.button`
+  margin-top: auto; /* Push the button to the bottom */
+  margin-bottom: 20px; /* Add margin to the bottom for spacing */
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 350px;
   font-weight: 700;
   color: black;
-  font-size: 14px;
-  border: 3px solid black;
-  border-radius: 20px;
+  font-size: 12px;
+  border: 2px solid black;
+  border-radius: 15px;
   background: white;
   text-align: center;
   &:hover {
-    font-weight: 600;
     background: linear-gradient(to right, #27272a, black, #27272a);
     color: white;
     cursor: pointer;
@@ -92,36 +95,63 @@ const Button = styled.button`
 const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
+  max-height: 100px;
+  flex-direction: column;
 `;
 
-const P = styled.p`
+const A = styled.p`
   font-weight: 700;
-  color: "black";
+  color: black;
+  margin: 15px 0;
   &:hover {
     color: #006fee;
     cursor: pointer;
   }
 `;
 
+const H1 = styled.h1`
+  color: black;
+  align-self: flex-start; /* Align text to the start of the card */
+  font-weight: 700;
+  font-size: 22px;
+  margin-left: 6px;
+`;
+
 export default function Login() {
+  const router = useRouter();
+
   return (
     <Container>
-      <Card>
+      <Form>
         <LogoContainer>
           <Logo />
         </LogoContainer>
-        <Text>Email</Text>
-        <Input placeholder="Insira o seu email" type="text" />
+        <H1>Login</H1>
+        <Label>Email</Label>
+        <Input
+          placeholder="Insira o seu email"
+          id="email"
+          name="email"
+          type="email"
+          autocomplete="email"
+          required
+        />
         <PasswordText>
-          <Text>Senha</Text>
+          <Label htmlFor="email">Senha</Label>
           <ForgotPassword>Esqueceu sua senha?</ForgotPassword>
         </PasswordText>
-        <Input placeholder="Insira a sua senha" type="password" />
-        <P href="/" onClick={() => router.push("/cadastro")}>
-          Não tenho uma conta
-        </P>
-        <Button>ENTRAR</Button>
-      </Card>
+        <Input
+          placeholder="Insira a sua senha"
+          htmlFor="password"
+          type="password"
+          autocomplete="password"
+          required
+        />
+        <A onClick={() => router.push("/cadastro")}>Não tenho uma conta</A>
+        <Button type="submit" formAction={login}>
+          ENTRAR
+        </Button>
+      </Form>
     </Container>
   );
 }
