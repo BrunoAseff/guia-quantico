@@ -1,5 +1,6 @@
 import { Zen_Maru_Gothic } from "next/font/google";
 import Stars from "../components/stars";
+import StyledComponentsRegistry from "./lib/registry";
 
 const Zen = Zen_Maru_Gothic({
   subsets: ["latin"],
@@ -14,8 +15,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={Zen.className}>
-        <Stars />
-        {children}
+        <StyledComponentsRegistry>
+          <Stars />
+          {children}
+        </StyledComponentsRegistry>
       </body>
     </html>
   );

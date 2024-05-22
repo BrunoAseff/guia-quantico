@@ -19,14 +19,13 @@ const Line = styled.div`
 `;
 
 const Circle = styled.div`
-  position: absolute;
-  top: 35%;
-  left: -55px;
+  position: relative;
+  translate: -57px 35px;
   width: 20px;
   height: 20px;
   background-color: white;
   border-radius: 50%;
-  box-shadow: 0px 0px 13px rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 0px 13px rgba(255, 255, 255, 0.3));
 `;
 
 export default function Tunelamento() {

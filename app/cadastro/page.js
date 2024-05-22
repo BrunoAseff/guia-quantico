@@ -16,6 +16,8 @@ const Container = styled.div`
 const Form = styled.form`
   width: 100%;
   max-width: 480px;
+  max-height: 90vh;
+
   background: white;
   display: flex;
   flex-direction: column;
@@ -29,7 +31,8 @@ const Form = styled.form`
 `;
 
 const Input = styled.input`
-  width: 430px;
+width: 100%;
+max-width: 430px;
   height: 45px;
   padding: 0 40px 0 10px;
   box-sizing: border-box;
@@ -38,6 +41,7 @@ const Input = styled.input`
   border-radius: 10px;
   color: white;
   text-align: start;
+  margin-bottom: 13px;
   &:focus {
     border: 4px solid white;
   }
@@ -54,7 +58,7 @@ const Label = styled.label`
   align-self: flex-start;
   font-weight: 700;
   font-size: 15px;
-  margin: 15px 0 5px 17px;
+  margin: 0 0 5px 17px;
 `;
 
 const LogoContainer = styled.div`
