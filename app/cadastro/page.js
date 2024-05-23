@@ -4,7 +4,9 @@ import styled from "styled-components";
 import Logo from "../../components/Logo";
 import { signup } from "../login/actions.js";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { Button } from "../login/page";
+import Image from "next/image";
 
 const Container = styled.div`
   display: flex;
@@ -17,7 +19,6 @@ const Form = styled.form`
   width: 100%;
   max-width: 480px;
   max-height: 90vh;
-
   background: white;
   display: flex;
   flex-direction: column;
@@ -31,9 +32,9 @@ const Form = styled.form`
 `;
 
 const Input = styled.input`
-width: 100%;
-max-width: 430px;
-  height: 45px;
+  width: 100%;
+  height: 48px;
+  max-width: 95%;
   padding: 0 40px 0 10px;
   box-sizing: border-box;
   background: black;
@@ -41,7 +42,6 @@ max-width: 430px;
   border-radius: 10px;
   color: white;
   text-align: start;
-  margin-bottom: 13px;
   &:focus {
     border: 4px solid white;
   }
@@ -51,6 +51,7 @@ max-width: 430px;
   &:hover {
     background: linear-gradient(to right, #27272a, black, #27272a);
     color: white;
+  }
 `;
 
 const Label = styled.label`
@@ -58,7 +59,7 @@ const Label = styled.label`
   align-self: flex-start;
   font-weight: 700;
   font-size: 15px;
-  margin: 0 0 5px 17px;
+  margin: 13px 0 5px 17px;
 `;
 
 const LogoContainer = styled.div`
@@ -70,8 +71,8 @@ const LogoContainer = styled.div`
 
 const A = styled.p`
   font-weight: 700;
-  color: black; /* Corrected color value */
-  margin: 15px 0; /* Add margin for better spacing */
+  color: black;
+  margin: 15px 0;
   &:hover {
     color: #006fee;
     cursor: pointer;
@@ -80,14 +81,45 @@ const A = styled.p`
 
 const H1 = styled.h1`
   color: black;
-  align-self: flex-start; /* Align text to the start of the card */
+  align-self: flex-start;
   font-weight: 700;
   font-size: 22px;
   margin-left: 17px;
 `;
 
+const PasswordContainer = styled.div`
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+`;
+
+const TogglePasswordButton = styled.button`
+  top: 10px;
+  left: 400px;
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+`;
+
+const ImageContainer = styled.div`
+  margin-top: 40px;
+`;
+
 export default function Cadastro() {
   const router = useRouter();
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
+  const toggleConfirmPasswordVisibility = () => {
+    setShowConfirmPassword(!showConfirmPassword);
+  };
 
   return (
     <Container>
@@ -109,15 +141,52 @@ export default function Cadastro() {
           required
         />
         <Label>Senha</Label>
-        <Input
-          placeholder="Insira a sua senha"
-          id="password"
-          name="password"
-          type="password"
-          required
-        />
-        <Label>Confirmar Senha</Label>
-        <Input placeholder="Confirme sua senha" type="password" required />
+
+        <PasswordContainer>
+          <Input
+            placeholder="Insira a sua senha"
+            id="password"
+            name="password"
+            type={showPassword ? "text" : "password"}
+            required
+          />
+          <TogglePasswordButton
+            type="button"
+            onClick={togglePasswordVisibility}
+          >
+            <Image
+              src={showPassword ? "/eye-opened.svg" : "/eye-closed.svg"}
+              alt="Toggle Password Visibility"
+              width={24}
+              height={24}
+            />
+          </TogglePasswordButton>
+        </PasswordContainer>
+
+        <PasswordContainer>
+          <Label>Confirmar Senha</Label>
+          <Input
+            placeholder="Confirme sua senha"
+            type={showConfirmPassword ? "text" : "password"}
+            required
+          />
+          <TogglePasswordButton
+            type="button"
+            onClick={toggleConfirmPasswordVisibility}
+          >
+            <ImageContainer>
+              <Image
+                src={
+                  showConfirmPassword ? "/eye-opened.svg" : "/eye-closed.svg"
+                }
+                alt="Toggle Password Visibility"
+                width={24}
+                height={24}
+              />
+            </ImageContainer>
+          </TogglePasswordButton>
+        </PasswordContainer>
+
         <A onClick={() => router.push("/login")}>Já tenho uma conta</A>
         <Button type="submit" formAction={signup}>
           CRIAR CONTA
