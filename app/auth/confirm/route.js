@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-
 import { createClient } from "@/utils/supabase/server";
 
 export async function GET(request) {
@@ -9,7 +8,6 @@ export async function GET(request) {
   const next = searchParams.get("next") ?? "/";
 
   const redirectTo = request.nextUrl.clone();
-  redirectTo.pathname = next;
   redirectTo.searchParams.delete("token_hash");
   redirectTo.searchParams.delete("type");
 
@@ -21,6 +19,7 @@ export async function GET(request) {
       token_hash,
     });
     if (!error) {
+      redirectTo.pathname = "/email-confirmed"; // Set the path to /email-confirmed upon successful verification
       redirectTo.searchParams.delete("next");
       return NextResponse.redirect(redirectTo);
     }
