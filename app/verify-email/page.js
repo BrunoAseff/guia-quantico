@@ -13,7 +13,7 @@ const Container = styled.div`
 const Card = styled.div`
   width: 100%;
   max-width: 480px;
-  height: 40vh;
+  height: auto;
   background: white;
   display: flex;
   align-items: center;
