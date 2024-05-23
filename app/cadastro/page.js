@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Button } from "../login/page";
 import Image from "next/image";
+import Loader from "../../components/Loader";
 
 const Container = styled.div`
   display: flex;
@@ -27,13 +28,12 @@ const Form = styled.form`
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   padding: 10px;
   box-sizing: border-box;
-  max-height: calc(100vh - 100px);
   mix-blend-mode: screen;
 `;
 
 const Input = styled.input`
   width: 100%;
-  height: 48px;
+  min-height: 48px;
   max-width: 95%;
   padding: 0 40px 0 10px;
   box-sizing: border-box;
@@ -112,6 +112,7 @@ export default function Cadastro() {
   const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -121,9 +122,24 @@ export default function Cadastro() {
     setShowConfirmPassword(!showConfirmPassword);
   };
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setIsLoading(true);
+
+    const formData = new FormData(event.target);
+
+    try {
+      await signup(formData);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <Container>
-      <Form method="POST">
+      <Form method="POST" onSubmit={handleSubmit}>
         <LogoContainer>
           <Logo />
         </LogoContainer>
@@ -131,13 +147,13 @@ export default function Cadastro() {
 
         <Label>Nome</Label>
         <Input placeholder="Insira o seu nome" type="text" />
-        <Label for="email">Email</Label>
+        <Label htmlFor="email">Email</Label>
         <Input
           placeholder="Insira o seu email"
           id="email"
           name="email"
           type="email"
-          autocomplete="email"
+          autoComplete="email"
           required
         />
         <Label>Senha</Label>
@@ -189,7 +205,7 @@ export default function Cadastro() {
 
         <A onClick={() => router.push("/login")}>Já tenho uma conta</A>
         <Button type="submit" formAction={signup}>
-          CRIAR CONTA
+          {isLoading ? <Loader /> : "CRIAR CONTA"}
         </Button>
       </Form>
     </Container>

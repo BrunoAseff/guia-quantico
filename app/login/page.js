@@ -78,6 +78,7 @@ export const Button = styled.button`
   padding: 10px 20px;
   width: 100%;
   max-width: 350px;
+  min-height: 38px;
   font-weight: 700;
   color: black;
   font-size: 12px;
