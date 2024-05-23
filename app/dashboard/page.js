@@ -1,7 +1,7 @@
 "use client";
 
 import styled from "styled-components";
-import Image from "next/image";
+import Dashboard_header from "@/components/Dashboard_header";
 
 const Container = styled.div`
   width: 140%;
@@ -24,34 +24,24 @@ const Circles = styled.svg`
   width: 100%;
   height: 100%;
   filter: url(#shadow);
+  &:hover {
+    color: blue;
+  }
+`;
+
+const Circle = styled.circle`
+  fill: white;
+  transition: fill 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    r: 7;
+  }
 `;
 
 const Text = styled.div`
   position: absolute;
   color: white;
-`;
-
-export const Button = styled.button`
-display: flex;
-text-align: center;
-font-weight: 300;
-background: white;
-color: black;
-font-size: 14px;
-padding: 11px 23px;
-margin-right: 20px;
-border-radius: 8px;
-display: flex;
-border-style: solid;
-box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
-border-width: 1px;
-
-&:hover{
-  box-shadow: 0px 0px 13px rgba(255, 255, 255, 0.3);
-  cursor: pointer;
-
-}
-}
 `;
 
 const texts = [
@@ -66,11 +56,7 @@ const texts = [
 export default function Dashboard() {
   return (
     <>
-      {" "}
-      <Button>
-        <Image src="sair.svg" alt="Email icon" width={10} height={10} />
-        Sair
-      </Button>
+      <Dashboard_header></Dashboard_header>
       <Container>
         <Lines xmlns="http://www.w3.org/2000/svg">
           {/* Linhas conectando as estrelas */}
@@ -118,12 +104,12 @@ export default function Dashboard() {
             </filter>
           </defs>
           {/* Estrelas */}
-          <circle cx="10%" cy="50%" r="5" fill="white" />
-          <circle cx="20%" cy="40%" r="5" fill="white" />
-          <circle cx="30%" cy="60%" r="5" fill="white" />
-          <circle cx="40%" cy="45%" r="5" fill="white" />
-          <circle cx="50%" cy="35%" r="5" fill="white" />
-          <circle cx="60%" cy="65%" r="5" fill="white" />
+          <Circle cx="10%" cy="50%" r="5" fill="white" />
+          <Circle cx="20%" cy="40%" r="5" fill="white" />
+          <Circle cx="30%" cy="60%" r="5" fill="white" />
+          <Circle cx="40%" cy="45%" r="5" fill="white" />
+          <Circle cx="50%" cy="35%" r="5" fill="white" />
+          <Circle cx="60%" cy="65%" r="5" fill="white" />
         </Circles>
         {texts.map((text, index) => (
           <Text key={index} style={{ left: text.x, top: text.y }}>

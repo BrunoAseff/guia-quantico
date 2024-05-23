@@ -80,7 +80,9 @@ export default function Verify() {
           Sua conta foi criada com sucesso. Clique no botão abaixo para começar
           a estudar.
         </P>
-        <Button onClick={() => router.push("/login")}>Começar a estudar</Button>
+        <Button onClick={() => router.push("/dashboard")}>
+          Começar a estudar
+        </Button>
       </Card>
     </Container>
   );
