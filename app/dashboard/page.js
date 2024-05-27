@@ -2,6 +2,7 @@
 
 import styled from "styled-components";
 import Dashboard_header from "@/components/Dashboard_header";
+import Link from "next/link";
 
 const Container = styled.div`
   width: 140%;
@@ -104,12 +105,24 @@ export default function Dashboard() {
             </filter>
           </defs>
           {/* Estrelas */}
-          <Circle cx="10%" cy="50%" r="5" fill="white" />
-          <Circle cx="20%" cy="40%" r="5" fill="white" />
-          <Circle cx="30%" cy="60%" r="5" fill="white" />
-          <Circle cx="40%" cy="45%" r="5" fill="white" />
-          <Circle cx="50%" cy="35%" r="5" fill="white" />
-          <Circle cx="60%" cy="65%" r="5" fill="white" />
+          <Link href="/dashboard/intro">
+            <Circle cx="10%" cy="50%" r="5" fill="white" />
+          </Link>
+          <Link href="/dashboard/principios-fundamentais">
+            <Circle cx="20%" cy="40%" r="5" fill="white" />
+          </Link>
+          <Link href="/dashboard/interpretacoes">
+            <Circle cx="30%" cy="60%" r="5" fill="white" />
+          </Link>
+          <Link href="/dashboard/particulas">
+            <Circle cx="40%" cy="45%" r="5" fill="white" />
+          </Link>
+          <Link href="/dashboard/campos-e-forcas">
+            <Circle cx="50%" cy="35%" r="5" fill="white" />
+          </Link>
+          <Link href="/dashboard/topicos-avancados">
+            <Circle cx="60%" cy="65%" r="5" fill="white" />
+          </Link>
         </Circles>
         {texts.map((text, index) => (
           <Text key={index} style={{ left: text.x, top: text.y }}>
