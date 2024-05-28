@@ -12,16 +12,36 @@ export const Container = styled.div`
 `;
 
 export const Card = styled.div`
-  margin-top: 10vh; /* Use viewport height for top margin */
-  max-width: 60vw;
-  max-height: 72vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+  width: fit content;
+  max-width: 48%;
+  max-height: 70vh;
+  height: fit-content;
   border-radius: 10px;
   border: 1px solid white;
   padding: 10px 30px 30px 30px;
   background: white;
-  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    margin: 20px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+  }
 `;
 
 export const Title = styled.div`
@@ -30,14 +50,30 @@ export const Title = styled.div`
   padding: 15px;
   font-weight: 900;
   text-align: center;
+  flex-shrink: 1;
 `;
 
 export const TextContainer = styled.div`
-  padding: 5px 20px;
+  position: relative;
+  flex: 1;
+  padding: 10px 20px;
   background: white;
   border-radius: 10px;
   border: black solid 3px;
-  font-size: 2.3vh; /* Use viewport height for font size */
+  font-size: 2.2vh;
   color: black;
   font-weight: 600;
+  max-width: 100%;
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`;
+
+export const Img = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;

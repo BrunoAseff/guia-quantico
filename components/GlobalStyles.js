@@ -14,5 +14,9 @@ body, html {
   overflow: hidden; // Ensures no scroll bars appear
 }
 
+.Inter {
+  font-family: var(--font-inter);
+}
+
 `;
 export default GlobalStyle;

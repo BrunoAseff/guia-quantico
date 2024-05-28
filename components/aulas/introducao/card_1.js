@@ -6,9 +6,7 @@ export default function Card_1() {
   return (
     <Container>
       <Card>
-        <Title>
-          O QUE É FÍSICA QUÂNTICA? <Card_1_animation />
-        </Title>
+        <Title>O QUE É FÍSICA QUÂNTICA?</Title> <Card_1_animation />
         <TextContainer>
           <p>
             Na escala subatômica, as coisas acontecem de forma bem diferente da

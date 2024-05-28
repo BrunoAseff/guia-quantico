@@ -1,10 +1,17 @@
 import { Zen_Maru_Gothic } from "next/font/google";
+import { Inter } from "next/font/google";
 import Stars from "../components/stars";
 import StyledComponentsRegistry from "./lib/registry";
 
 const Zen = Zen_Maru_Gothic({
   subsets: ["latin"],
   weight: ["300", "400", "500", "700", "900"],
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-inter",
 });
 
 export const metadata = {
@@ -18,7 +25,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={Zen.className}>
+      <body className={`${Zen.className} ${inter.variable}`}>
         <StyledComponentsRegistry>
           <Stars />
           {children}

@@ -13,7 +13,6 @@ const Container = styled.div`
 `;
 
 const Proton = styled.div`
-  left: 10%;
   width: 130px;
   height: 130px;
   position: relative;

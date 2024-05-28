@@ -1,6 +1,6 @@
 "use client";
 
-import { Container, Card, Title, TextContainer } from "../../aulas";
+import { Container, Card, Title, TextContainer, Img } from "../../aulas";
 
 export default function Card_2() {
   return (
@@ -30,7 +30,7 @@ export default function Card_2() {
             física quântica vai se parecer com tentar imaginar uma cor que não
             existe: Impossível!
           </p>
-          <img src="/teste.png"></img>
+          <Img src="/teste.png"></Img>
         </TextContainer>
       </Card>
     </Container>

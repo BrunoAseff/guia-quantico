@@ -23,11 +23,6 @@ const Stars = () => {
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
-    const w = (canvas.width = window.innerWidth);
-    const h = (canvas.height = window.innerHeight);
-    const hue = 250;
-    let count = 0;
-
     const canvas2 = document.createElement("canvas");
     const ctx2 = canvas2.getContext("2d");
     canvas2.width = 100;
@@ -42,8 +37,8 @@ const Stars = () => {
       half
     );
     gradient2.addColorStop(0.025, "#fff");
-    gradient2.addColorStop(0.1, `hsl(${hue}, 61%, 3%)`);
-    gradient2.addColorStop(0.25, `hsl(${hue}, 64%, 0%)`);
+    gradient2.addColorStop(0.1, `hsl(250, 61%, 3%)`);
+    gradient2.addColorStop(0.25, `hsl(250, 64%, 0%)`);
     gradient2.addColorStop(1, "transparent");
 
     ctx2.fillStyle = gradient2;
@@ -74,16 +69,15 @@ const Stars = () => {
 
     class Star {
       constructor() {
-        this.orbitRadius = random(maxOrbit(w, h));
+        this.orbitRadius = random(
+          maxOrbit(window.innerWidth, window.innerHeight)
+        );
         this.radius = random(60, this.orbitRadius) / 12;
-        this.orbitX = w / 2;
-        this.orbitY = h / 2;
+        this.orbitX = window.innerWidth / 2;
+        this.orbitY = window.innerHeight / 2;
         this.timePassed = random(0, maxStars);
         this.speed = random(this.orbitRadius) / 800000;
         this.alpha = random(2, 10) / 10;
-
-        count++;
-        stars[count] = this;
       }
 
       draw() {
@@ -109,36 +103,39 @@ const Stars = () => {
       }
     }
 
-    for (let i = 0; i < maxStars; i++) {
-      new Star();
+    function createStars() {
+      stars.length = 0;
+      for (let i = 0; i < maxStars; i++) {
+        stars.push(new Star());
+      }
     }
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      createStars();
+    }
+
+    resizeCanvas();
 
     function animation() {
       ctx.globalCompositeOperation = "source-over";
       ctx.globalAlpha = 1;
-      ctx.fillStyle = `hsla(${hue}, 30%, 3%, 10)`; //ajustar cor de fundo
-      ctx.fillRect(0, 0, w, h);
+      ctx.fillStyle = `hsla(250, 30%, 3%, 10)`;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       ctx.globalCompositeOperation = "lighter";
-      for (let i = 1, l = stars.length; i < l; i++) {
-        stars[i].draw();
-      }
+      stars.forEach((star) => star.draw());
 
       requestAnimationFrame(animation);
     }
 
     animation();
 
-    window.addEventListener("resize", () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    });
+    window.addEventListener("resize", resizeCanvas);
 
     return () => {
-      window.removeEventListener("resize", () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      });
+      window.removeEventListener("resize", resizeCanvas);
     };
   }, []);
 
