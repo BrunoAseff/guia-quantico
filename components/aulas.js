@@ -12,58 +12,49 @@ export const Container = styled.div`
 `;
 
 export const Card = styled.div`
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: 15vh;
   margin-bottom: 15vh;
-  width: fit content;
-  max-width: 48%;
-  max-height: 70vh;
+  width: fit-content;
+  max-width: 50vw;
+  max-height: 68vh;
   height: fit-content;
   border-radius: 10px;
-  border: 1px solid white;
-  padding: 10px 30px 30px 30px;
+  border: 5px solid white;
+  padding: 15px;
   background: white;
   overflow-x: hidden;
   overflow-y: auto;
 
   &::-webkit-scrollbar {
-    width: 4px;
-    margin: 20px;
+    width: 10px;
   }
   &::-webkit-scrollbar-track {
+    margin: 5px;
     background: transparent;
-    border-radius: 10px;
   }
   &::-webkit-scrollbar-thumb {
     background: black;
-    border-radius: 10px;
+    border-radius: 200px;
   }
 `;
 
 export const Title = styled.div`
+  margin: 15px;
   color: black;
   font-size: 3.5vh;
-  padding: 15px;
   font-weight: 900;
   text-align: center;
-  flex-shrink: 1;
 `;
 
 export const TextContainer = styled.div`
-  position: relative;
-  flex: 1;
-  padding: 10px 20px;
-  background: white;
-  border-radius: 10px;
-  border: black solid 3px;
+  padding: 13px;
   font-size: 2.2vh;
   color: black;
   font-weight: 600;
-  max-width: 100%;
 `;
 
 export const ButtonContainer = styled.div`

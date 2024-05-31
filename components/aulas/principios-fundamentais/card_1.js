@@ -1,5 +1,7 @@
 "use client";
+import { useState } from "react";
 import Card_1_animation from "../../animations/principios-fundamentais/card_1";
+import Card_1_animation2 from "../../animations/principios-fundamentais/card_1.1";
 import {
   Container,
   Card,
@@ -10,6 +12,12 @@ import {
 import { WhiteButton } from "../../../components/WhiteButton";
 
 export default function Card_1() {
+  const [isFirstAnimation, setIsFirstAnimation] = useState(true);
+
+  const toggleAnimation = () => {
+    setIsFirstAnimation(!isFirstAnimation);
+  };
+
   return (
     <Container>
       <Card>
@@ -31,9 +39,11 @@ export default function Card_1() {
             É como se a luz tivesse uma identidade dupla, dependendo de como a
             observamos.
           </p>
-          <Card_1_animation />
+          {isFirstAnimation ? <Card_1_animation /> : <Card_1_animation2 />}
           <ButtonContainer>
-            <WhiteButton>MUDAR COMPORTAMENTO DA LUZ</WhiteButton>
+            <WhiteButton onClick={toggleAnimation}>
+              MUDAR COMPORTAMENTO DA LUZ
+            </WhiteButton>
           </ButtonContainer>
         </TextContainer>
       </Card>

@@ -14,10 +14,12 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 95vh;
+  padding: 10px;
+  box-sizing: border-box;
 `;
 
 const Form = styled.form`
-  width: 100%;
+  width: 90%;
   max-width: 480px;
   max-height: 90vh;
   background: white;
@@ -26,15 +28,17 @@ const Form = styled.form`
   align-items: center;
   border-radius: 8px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-  padding: 10px;
+  padding: 20px;
   box-sizing: border-box;
   mix-blend-mode: screen;
+  @media (max-width: 600px) {
+    padding: 10px;
+  }
 `;
 
 const Input = styled.input`
   width: 100%;
   min-height: 48px;
-  max-width: 95%;
   padding: 0 40px 0 10px;
   box-sizing: border-box;
   background: black;
@@ -60,6 +64,9 @@ const Label = styled.label`
   font-weight: 700;
   font-size: 15px;
   margin: 13px 0 5px 17px;
+  @media (max-width: 600px) {
+    margin: 8px 0 4px 10px;
+  }
 `;
 
 const LogoContainer = styled.div`
@@ -85,6 +92,10 @@ const H1 = styled.h1`
   font-weight: 700;
   font-size: 22px;
   margin-left: 17px;
+  @media (max-width: 600px) {
+    font-size: 18px;
+    margin-left: 10px;
+  }
 `;
 
 const PasswordContainer = styled.div`
@@ -97,7 +108,7 @@ const PasswordContainer = styled.div`
 
 const TogglePasswordButton = styled.button`
   top: 10px;
-  left: 400px;
+  right: 10px;
   position: absolute;
   background: none;
   border: none;

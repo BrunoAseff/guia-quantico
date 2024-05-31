@@ -6,12 +6,21 @@ import React from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
 import Card_1 from "@/components/aulas/principios-fundamentais/card_1";
+import Card_2 from "@/components/aulas/principios-fundamentais/card_2";
+import Card_3 from "@/components/aulas/principios-fundamentais/card_3";
+import Card_4 from "@/components/aulas/principios-fundamentais/card_4";
+import Card_5 from "@/components/aulas/principios-fundamentais/card_5";
+import Card_6 from "@/components/aulas/principios-fundamentais/card_6";
+import Card_7 from "@/components/aulas/principios-fundamentais/card_7";
+
+import Aulas_header from "@/components/Aulas_header";
 
 const Container = styled.div`
   position: absolute;
   max-width: 99vw;
   max-height: 90vh;
   margin 0;
+
 `;
 
 export default function SimpleSlider() {
@@ -26,12 +35,28 @@ export default function SimpleSlider() {
   };
   return (
     <Container>
+      <Aulas_header />
       <Slider {...settings}>
         <div>
           <Card_1 />
         </div>
         <div>
-          <Card_1 />
+          <Card_2 />
+        </div>
+        <div>
+          <Card_3 />
+        </div>
+        <div>
+          <Card_4 />
+        </div>
+        <div>
+          <Card_5 />
+        </div>
+        <div>
+          <Card_6 />
+        </div>
+        <div>
+          <Card_7 />
         </div>
       </Slider>
     </Container>

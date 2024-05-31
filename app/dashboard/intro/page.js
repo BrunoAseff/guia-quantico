@@ -8,6 +8,7 @@ import styled from "styled-components";
 import Card_1 from "@/components/aulas/introducao/card_1";
 import Card_2 from "@/components/aulas/introducao/card_2";
 import Card_3 from "@/components/aulas/introducao/card_3";
+import Aulas_header from "@/components/Aulas_header";
 
 const Container = styled.div`
   position: absolute;
@@ -27,18 +28,21 @@ export default function SimpleSlider() {
     waitForAnimate: false,
   };
   return (
-    <Container>
-      <Slider {...settings}>
-        <div>
-          <Card_1 />
-        </div>
-        <div>
-          <Card_2 />
-        </div>
-        <div>
-          <Card_3 />
-        </div>
-      </Slider>
-    </Container>
+    <>
+      <Aulas_header />
+      <Container>
+        <Slider {...settings}>
+          <div>
+            <Card_1 />
+          </div>
+          <div>
+            <Card_2 />
+          </div>
+          <div>
+            <Card_3 />
+          </div>
+        </Slider>
+      </Container>
+    </>
   );
 }
