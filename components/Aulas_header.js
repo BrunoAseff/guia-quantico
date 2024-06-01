@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 const Div = styled.div`
   display: flex;
   justify-content: center;
-  padding: 15px;
+  padding: 17px;
 `;
 const Container = styled.div`
   position: fixed;
@@ -19,16 +19,17 @@ const Container = styled.div`
 const Button = styled.button`
   background: black;
   color: white;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 300;
-  padding: 7px 19px;
+  padding: 10px 23px;
   border-radius: 8px;
   border: solid white 1px;
-  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
-  transition: box-shadow 0.3s ease;
+  mix-blend-mode: screen;
 
   &:hover {
-    box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
+    transition: box-shadow 0.3s ease;
+
     cursor: pointer;
   }
 `;

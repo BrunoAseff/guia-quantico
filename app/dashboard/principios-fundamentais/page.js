@@ -12,15 +12,15 @@ import Card_4 from "@/components/aulas/principios-fundamentais/card_4";
 import Card_5 from "@/components/aulas/principios-fundamentais/card_5";
 import Card_6 from "@/components/aulas/principios-fundamentais/card_6";
 import Card_7 from "@/components/aulas/principios-fundamentais/card_7";
+import Card_8 from "@/components/aulas/principios-fundamentais/card_8";
 
 import Aulas_header from "@/components/Aulas_header";
 
 const Container = styled.div`
-  position: absolute;
-  max-width: 99vw;
-  max-height: 90vh;
   margin 0;
-
+  padding: 0;
+  left: 0;
+  top: 0;
 `;
 
 export default function SimpleSlider() {
@@ -57,6 +57,9 @@ export default function SimpleSlider() {
         </div>
         <div>
           <Card_7 />
+        </div>
+        <div>
+          <Card_8 />
         </div>
       </Slider>
     </Container>

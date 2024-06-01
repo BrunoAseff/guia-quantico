@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Image from "next/image";
 
 export const Container = styled.div`
   display: flex;
@@ -21,7 +22,7 @@ export const Card = styled.div`
   width: fit-content;
   max-width: 50vw;
   max-height: 68vh;
-  height: fit-content;
+  height: auto;
   border-radius: 10px;
   border: 5px solid white;
   padding: 15px;
@@ -54,7 +55,7 @@ export const TextContainer = styled.div`
   padding: 13px;
   font-size: 2.2vh;
   color: black;
-  font-weight: 600;
+  font-weight: 500;
 `;
 
 export const ButtonContainer = styled.div`
@@ -63,8 +64,12 @@ export const ButtonContainer = styled.div`
   width: 100%;
 `;
 
-export const Img = styled.img`
+export const StyledImage = styled(Image)`
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
 `;

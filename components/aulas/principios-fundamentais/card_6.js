@@ -6,28 +6,38 @@ export default function Card_6() {
   return (
     <Container>
       <Card>
-        <Title>Incerteza de Heisenberg</Title>
+        <Title>Decoerência</Title>
         <TextContainer>
+          <p>Mas, por que não vemos esses fenômenos no dia a dia?</p>
           <p>
-            Uma das ideias mais intrigantes da física quântica é o Princípio da
-            Incerteza de Heisenberg.
-          </p>
-          <p>
-            Em termos simples, ele diz que é impossível conhecer simultaneamente
-            a posição exata e a velocidade exata de uma partícula.
+            A resposta está no conceito de decoerência que explica como o
+            comportamento quântico de partículas individuais se perde quando
+            essas partículas interagem com o ambiente.
           </p>
 
           <p>
-            Se medirmos a posição de um elétron com precisão, sua velocidade se
-            torna incerta, e vice-versa.
+            No nível quântico, partículas podem existir em estados de
+            superposição. Mas, quando essas partículas interagem com inúmeras
+            outras partículas à sua volta, a superposição se desfaz.
           </p>
           <p>
-            Este princípio mostra que o mundo quântico é probabilístico, não
-            determinístico.
+            É como tentar manter uma onda em um lago perfeitamente calmo
+            enquanto centenas de pedras são jogadas na água.
           </p>
           <p>
-            Ele nos lembra que, no nível quântico, não existem certezas
-            absolutas. E que a realidade é, em parte, indeterminada.
+            Essas interações fazem com que as propriedades quânticas se
+            decoerem, ou seja, se dissipem.
+          </p>
+          <p>
+            No mundo macroscópico, onde há muitas partículas interagindo, a
+            decoerência é extremamente rápida.
+          </p>
+          <p>
+            Isso faz com que os objetos ao nosso redor se comportem de maneira
+            previsível e clássica.
+          </p>
+          <p>
+            Por isso, você nunca vê gatos vivos e mortos ao mesmo tempo por aí.
           </p>
         </TextContainer>
       </Card>

@@ -6,38 +6,39 @@ export default function Card_5() {
   return (
     <Container>
       <Card>
-        <Title>Decoerência</Title>
+        <Title>Entrelaçamento Quântico</Title>
         <TextContainer>
-          <p>Mas, por que não vemos esses fenômenos no dia a dia?</p>
           <p>
-            A resposta está no conceito de decoerência que explica como o
-            comportamento quântico de partículas individuais se perde quando
-            essas partículas interagem com o ambiente.
+            Na verdade, essa ideia de que a nossa "observação" afeta o estado do
+            gato normalmente acaba sendo mal interpretada.
+          </p>
+          <p>
+            Não, não é a nossa consciência que faz a superposição colapsar. O
+            que realmente importa não é a observação em si, mas a interação que
+            ocorre.
           </p>
 
           <p>
-            No nível quântico, partículas podem existir em estados de
-            superposição. Mas, quando essas partículas interagem com inúmeras
-            outras partículas à sua volta, a superposição se desfaz.
+            Isso nos leva a outro conceito fascinante: o entrelaçamento
+            quântico.
           </p>
           <p>
-            É como tentar manter uma onda em um lago perfeitamente calmo
-            enquanto centenas de pedras são jogadas na água.
+            Quando duas partículas se entrelaçam, elas se tornam conectadas de
+            tal forma que o estado de uma afeta o estado da outra, não importa a
+            distância entre elas.
           </p>
           <p>
-            Essas interações fazem com que as propriedades quânticas se
-            decoerem, ou seja, se dissipem.
+            Imagine dois dados quânticos. Se eles estão entrelaçados, rolar um
+            dado instantaneamente determina o resultado do outro, mesmo que
+            estejam em lados opostos do universo.
           </p>
           <p>
-            No mundo macroscópico, onde há muitas partículas interagindo, a
-            decoerência é extremamente rápida.
+            Essa conexão não depende de observação humana, mas da interação
+            entre as partículas no momento do entrelaçamento.
           </p>
           <p>
-            Isso faz com que os objetos ao nosso redor se comportem de maneira
-            previsível e clássica.
-          </p>
-          <p>
-            Por isso, você nunca vê gatos vivos e mortos ao mesmo tempo por aí.
+            É como se, ao serem entrelaçadas, as partículas compartilhassem as
+            suas informações instantaneamente.
           </p>
         </TextContainer>
       </Card>

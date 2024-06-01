@@ -6,29 +6,28 @@ export default function Card_7() {
   return (
     <Container>
       <Card>
-        <Title>Tunelamento quântico</Title>
+        <Title>Incerteza de Heisenberg</Title>
         <TextContainer>
           <p>
-            Um dos fenômenos que essa incerteza causa é o tunelamento quântico.
+            Uma das ideias mais intrigantes da física quântica é o Princípio da
+            Incerteza de Heisenberg.
           </p>
           <p>
-            Imagine tentar atravessar uma parede sólida. No mundo macroscópico,
-            isso é impossível.
+            Em termos simples, ele diz que é impossível conhecer simultaneamente
+            a posição exata e a velocidade exata de uma partícula.
           </p>
 
           <p>
-            Mas, no mundo quântico, partículas como elétrons podem fazer
-            exatamente isso!
-          </p>
-          <p>Como isso funciona?</p>
-          <p>
-            Quando uma partícula encontra uma barreira, por causa da incerteza
-            da posição dela, há uma pequena probabilidade de que ela esteja, na
-            verdade, no outro lado dessa barreira.
+            Se medirmos a posição de um elétron com precisão, sua velocidade se
+            torna incerta, e vice-versa.
           </p>
           <p>
-            Inclusive, o tunelamento é usado para funcionamento dos transistores
-            e está presente em boa parte dos nossos dispositivos eletrônicos.
+            Este princípio mostra que o mundo quântico é probabilístico, não
+            determinístico.
+          </p>
+          <p>
+            Ele nos lembra que, no nível quântico, não existem certezas
+            absolutas. E que a realidade é, em parte, indeterminada.
           </p>
         </TextContainer>
       </Card>

@@ -11,22 +11,19 @@ export default function Card_3() {
           <p>A física quântica estuda corpos em escalas muuuito pequenas.</p>
 
           <p>
-            Tão pequenas, que até mesmo as regras da física agem de forma
-            diferente nessa escala.
+            Tão pequenas, que o comportamento e as propriedades dessas
+            partículas são contraintuitivos ao que experimentamos no mundo
+            macroscópico.
           </p>
 
           <p>
-            <strong style={{ color: "#006FEE" }}>
-              {" "}
-              Um elétron tem cheiro?{" "}
-            </strong>{" "}
-            <br></br>óbvio que não - o cheiro é mostrado pelos nossos sentidos a
-            partir de moléculas gigantescas.
+            <strong> Um elétron tem cheiro? </strong> <br></br>Óbvio que não - o
+            cheiro é mostrado pelos nossos sentidos a partir de moléculas
+            gigantescas.
           </p>
           <p>
             {" "}
-            <strong style={{ color: "#006FEE" }}>Ele tem cor? </strong>{" "}
-            <br></br>
+            <strong>Ele tem cor? </strong> <br></br>
             Também não, os elétrons são muito muito menores que a frequência de
             onda da luz visível.
           </p>

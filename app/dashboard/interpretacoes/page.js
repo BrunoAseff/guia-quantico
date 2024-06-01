@@ -12,11 +12,10 @@ import Card_3 from "@/components/aulas/interpretacoes/card_3";
 import Aulas_header from "@/components/Aulas_header";
 
 const Container = styled.div`
-  position: absolute;
-  max-width: 99vw;
-  max-height: 90vh;
   margin 0;
-
+  padding: 0;
+  left: 0;
+  top: 0;
 `;
 
 export default function SimpleSlider() {

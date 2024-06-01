@@ -6,13 +6,8 @@ const Container = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-`;
-
-const Line = styled.div`
-  position: relative;
-  width: 0px;
   height: 10vh;
-  background-color: white;
+  position: relative;
 `;
 
 const Circle = styled.div`
@@ -21,10 +16,9 @@ const Circle = styled.div`
   height: 20px;
   background-color: ${({ color }) => color};
   border-radius: 50%;
-  box-shadow: 0px 0px 13px rgba(255, 255, 255, 0.3);
 `;
 
-const colors = ["black", "black", "black", "black", "black", "black"];
+const colors = ["black", "black", "black", "black", "black"];
 
 export default function Card_1_animation2() {
   const circleRefs = useRef([]);
@@ -35,7 +29,7 @@ export default function Card_1_animation2() {
         targets: circle,
         translateX: [
           {
-            value: 600 + Math.random() * 50,
+            value: 1000 + Math.random() * 50,
             duration: 1000 + Math.random() * 500,
           },
           { value: 0, duration: 1000 + Math.random() * 500 },
@@ -56,16 +50,14 @@ export default function Card_1_animation2() {
 
   return (
     <Container>
-      <Line>
-        {colors.map((color, index) => (
-          <Circle
-            key={index}
-            ref={(el) => (circleRefs.current[index] = el)}
-            color={color}
-            style={{ top: `${20 + index * 20}%`, left: "-80px" }}
-          />
-        ))}
-      </Line>
+      {colors.map((color, index) => (
+        <Circle
+          key={index}
+          ref={(el) => (circleRefs.current[index] = el)}
+          color={color}
+          style={{ top: `${20 + index * 20}%`, left: "-80px" }}
+        />
+      ))}
     </Container>
   );
 }
