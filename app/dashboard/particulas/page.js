@@ -28,7 +28,7 @@ export default function SimpleSlider(id) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const handleProgressUpdate = async () => {
-    const response = await fetch("/progress", {
+    const response = await fetch("/api/progress", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
