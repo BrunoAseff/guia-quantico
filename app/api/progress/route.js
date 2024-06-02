@@ -2,9 +2,9 @@ import { updateProgress } from "@/utils/supabase/progress";
 
 export async function POST(req) {
   try {
-    const { id, increment } = await req.json();
+    const { increment } = await req.json();
 
-    await updateProgress(id, increment);
+    await updateProgress(increment);
     return new Response(JSON.stringify({ success: true }), { status: 200 });
   } catch (error) {
     console.error("Failed to update progress:", error);
