@@ -23,7 +23,7 @@ const Container = styled.div`
   top: 0;
 `;
 
-export default function SimpleSlider(id) {
+export default function SimpleSlider({ id }) {
   const [progress, setProgress] = useState(0);
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -38,7 +38,7 @@ export default function SimpleSlider(id) {
 
     if (response.ok) {
       const newProgress = await response.json();
-      setProgress(newProgress);
+      setProgress(newProgress.progress);
     }
   };
 
