@@ -23,7 +23,7 @@ const Container = styled.div`
   top: 0;
 `;
 
-export default function SimpleSlider({ id }) {
+export default function SimpleSlider() {
   const [progress, setProgress] = useState(0);
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -33,12 +33,12 @@ export default function SimpleSlider({ id }) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ id, increment: 20 }),
+      body: JSON.stringify({ increment: 21 }),
     });
 
     if (response.ok) {
       const newProgress = await response.json();
-      setProgress(newProgress.progress);
+      setProgress(newProgress);
     }
   };
 
