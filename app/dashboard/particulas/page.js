@@ -37,7 +37,7 @@ export default function SimpleSlider() {
     });
 
     if (response.ok) {
-      const newProgress = await response.json();
+      const { newProgress } = await response.json();
       setProgress(newProgress);
     }
   };
