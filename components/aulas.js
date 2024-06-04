@@ -43,6 +43,25 @@ export const Card = styled.div`
   }
 `;
 
+export const MockCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+  width: fit-content;
+  max-width: 50vw;
+  max-height: 68vh;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 15px;
+  background: white;
+  overflow-x: hidden;
+  overflow-y: auto;
+`;
+
 export const Title = styled.div`
   margin: 15px;
   color: black;

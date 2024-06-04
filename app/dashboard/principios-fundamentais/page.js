@@ -13,7 +13,7 @@ import Card_5 from "@/components/aulas/principios-fundamentais/card_5";
 import Card_6 from "@/components/aulas/principios-fundamentais/card_6";
 import Card_7 from "@/components/aulas/principios-fundamentais/card_7";
 import Card_8 from "@/components/aulas/principios-fundamentais/card_8";
-
+import MockCards from "@/components/MockCards/MockCards";
 import Aulas_header from "@/components/Aulas_header";
 
 const Container = styled.div`
@@ -45,6 +45,7 @@ export default function SimpleSlider() {
         </div>
         <div>
           <Card_3 />
+          <MockCards />
         </div>
         <div>
           <Card_4 />

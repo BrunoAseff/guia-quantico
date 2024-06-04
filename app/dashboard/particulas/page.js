@@ -24,23 +24,7 @@ const Container = styled.div`
 `;
 
 export default function SimpleSlider() {
-  const [progress, setProgress] = useState(0);
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  const handleProgressUpdate = async () => {
-    const response = await fetch("/api/progress", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ increment: 21 }),
-    });
-
-    if (response.ok) {
-      const { newProgress } = await response.json();
-      setProgress(newProgress);
-    }
-  };
 
   const settings = {
     dots: false,
@@ -91,12 +75,6 @@ export default function SimpleSlider() {
           <Card_8 />
         </div>
       </Slider>
-      {currentSlide === 7 && (
-        <CompleteButton onClick={handleProgressUpdate}>
-          Marcar como concluído
-        </CompleteButton>
-      )}
-      <div>Progresso: {progress}%</div>
     </Container>
   );
 }
