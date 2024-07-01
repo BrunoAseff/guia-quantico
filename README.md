@@ -8,20 +8,13 @@ A física quântica é frequentemente explicada de forma muito complexa, com ana
 
 ## Tecnologias Utilizadas
 
-- **Next.js**: Utilizado para a estrutura e roteamento do site.
-- **React**: Usado para construir a interface de usuário.
-- **Styled Components**: Utilizado para estilização dos componentes.
-- **Supabase**: Usado para gerenciamento de banco de dados e autenticação.
-- **PostgreSQL**: Banco de dados relacional utilizado para armazenar os dados do curso e dos usuários.
-- **Autenticação**: Implementação de sistemas de login e registro de usuários.
-- **Anime.js**: Utilizado para animações e interações visuais dinâmicas.
+- **Next.js**
+- **React**
+- **Styled Components**
+- **Supabase**
+- **PostgreSQL**
+- **Autenticação**
+- **Anime.js**
 
-## Funcionalidades
 
-- **Curso de Física Quântica**: Conteúdo didático e interativo para facilitar a compreensão dos conceitos quânticos.
-- **Autenticação de Usuários**: Sistema de login e registro para acessar conteúdos exclusivos.
-- **Animações**: Efeitos visuais atraentes utilizando Anime.js para tornar o aprendizado mais dinâmico.
-
-## Contribuição
-
-Contribuições são bem-vindas! Se você tiver sugestões, encontrar problemas ou quiser colaborar com o desenvolvimento, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+ **Observação**: A Supabase congelou o banco de dados por inatividade, portanto não é possível fazer login e nem criar contas. As aulas estão abertas e podem ser acessadas pela rota `/dashboard`.
